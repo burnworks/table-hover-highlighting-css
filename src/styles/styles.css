@@ -41,7 +41,7 @@
             &:has(~ td:hover) {
                 @apply bg-red-500/5;
             }
-            &:has(~ td:focus) {
+            &:has(~ td :focus-within) {
                 @apply bg-red-500/5;
             }
         }
@@ -52,7 +52,7 @@
             &:has(td:hover) th {
                 @apply bg-red-500/10;
             }
-            &:has(td:focus) th {
+            &:has(td :focus-within) th {
                 @apply bg-red-500/10;
             }
         }
@@ -78,25 +78,25 @@
     table:has(tbody td:nth-of-type(12):hover) thead tr th:nth-of-type(12) {
         @apply bg-red-500/10;
     }
-    table:has(tbody td:nth-of-type(1):focus) thead tr th:nth-of-type(1),
-    table:has(tbody td:nth-of-type(2):focus) thead tr th:nth-of-type(2),
-    table:has(tbody td:nth-of-type(3):focus) thead tr th:nth-of-type(3),
-    table:has(tbody td:nth-of-type(4):focus) thead tr th:nth-of-type(4),
-    table:has(tbody td:nth-of-type(5):focus) thead tr th:nth-of-type(5),
-    table:has(tbody td:nth-of-type(6):focus) thead tr th:nth-of-type(6),
-    table:has(tbody td:nth-of-type(7):focus) thead tr th:nth-of-type(7),
-    table:has(tbody td:nth-of-type(8):focus) thead tr th:nth-of-type(8),
-    table:has(tbody td:nth-of-type(9):focus) thead tr th:nth-of-type(9),
-    table:has(tbody td:nth-of-type(10):focus) thead tr th:nth-of-type(10),
-    table:has(tbody td:nth-of-type(11):focus) thead tr th:nth-of-type(11),
-    table:has(tbody td:nth-of-type(12):focus) thead tr th:nth-of-type(12) {
+    table:has(tbody td:nth-of-type(1) :focus-within) thead tr th:nth-of-type(1),
+    table:has(tbody td:nth-of-type(2) :focus-within) thead tr th:nth-of-type(2),
+    table:has(tbody td:nth-of-type(3) :focus-within) thead tr th:nth-of-type(3),
+    table:has(tbody td:nth-of-type(4) :focus-within) thead tr th:nth-of-type(4),
+    table:has(tbody td:nth-of-type(5) :focus-within) thead tr th:nth-of-type(5),
+    table:has(tbody td:nth-of-type(6) :focus-within) thead tr th:nth-of-type(6),
+    table:has(tbody td:nth-of-type(7) :focus-within) thead tr th:nth-of-type(7),
+    table:has(tbody td:nth-of-type(8) :focus-within) thead tr th:nth-of-type(8),
+    table:has(tbody td:nth-of-type(9) :focus-within) thead tr th:nth-of-type(9),
+    table:has(tbody td:nth-of-type(10) :focus-within) thead tr th:nth-of-type(10),
+    table:has(tbody td:nth-of-type(11) :focus-within) thead tr th:nth-of-type(11),
+    table:has(tbody td:nth-of-type(12) :focus-within) thead tr th:nth-of-type(12) {
         @apply bg-red-500/10;
     }
 
     /* If Sass ------------------------
         @for $i from 1 through 12 {
             table:has(tbody td:nth-of-type(#{$i}):hover) thead tr th:nth-of-type(#{$i}),
-            table:has(tbody td:nth-of-type(#{$i}):focus) thead tr th:nth-of-type(#{$i}) {
+            table:has(tbody td:nth-of-type(#{$i}) :focus-within) thead tr th:nth-of-type(#{$i}) {
                 background-color: ***;
             }
         }
