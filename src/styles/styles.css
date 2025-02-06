@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+    --font-body: "Noto Sans JP Variable", sans-serif;
+}
+
+/* ↓ ここから table のスタイル ↓ */
+@layer components {
+
+    table {
+        @apply min-w-full border-separate border-spacing-0 overflow-hidden border border-gray-400;
+    }
+    caption {
+        @apply pb-6 font-semibold text-gray-900;
+    }
+    thead {
+        @apply sticky inset-x-0 top-0 bg-green-50 border-b border-gray-300 shadow-sm z-10;
+
+        th {
+            @apply text-center;
+        }
+        td {
+            @apply border-r border-gray-300;
+        }
+    }
+    tbody {
+        @apply divide-y divide-gray-300;
+
+        th {
+            @apply border-r border-gray-300;
+        }
+        td {
+            @apply text-center;
+
+            &:hover {
+                @apply bg-red-500/30;
+            }
+            &:focus {
+                @apply bg-red-500/30;
+            }
+            &:has(~ td:hover) {
+                @apply bg-red-500/5;
+            }
+            &:has(~ td:focus) {
+                @apply bg-red-500/5;
+            }
+        }
+        tr {
+            &:nth-child(even) {
+                @apply bg-gray-50;
+            }
+            &:has(td:hover) th {
+                @apply bg-red-500/10;
+            }
+            &:has(td:focus) th {
+                @apply bg-red-500/10;
+            }
+        }
+    }
+    th {
+        @apply whitespace-nowrap px-3 py-4 text-left font-semibold text-gray-900;
+    }
+    td {
+        @apply whitespace-nowrap px-3 py-4 text-sm text-gray-700;
+    }
+
+    table:has(tbody td:nth-of-type(1):hover) thead tr th:nth-of-type(1),
+    table:has(tbody td:nth-of-type(2):hover) thead tr th:nth-of-type(2),
+    table:has(tbody td:nth-of-type(3):hover) thead tr th:nth-of-type(3),
+    table:has(tbody td:nth-of-type(4):hover) thead tr th:nth-of-type(4),
+    table:has(tbody td:nth-of-type(5):hover) thead tr th:nth-of-type(5),
+    table:has(tbody td:nth-of-type(6):hover) thead tr th:nth-of-type(6),
+    table:has(tbody td:nth-of-type(7):hover) thead tr th:nth-of-type(7),
+    table:has(tbody td:nth-of-type(8):hover) thead tr th:nth-of-type(8),
+    table:has(tbody td:nth-of-type(9):hover) thead tr th:nth-of-type(9),
+    table:has(tbody td:nth-of-type(10):hover) thead tr th:nth-of-type(10),
+    table:has(tbody td:nth-of-type(11):hover) thead tr th:nth-of-type(11),
+    table:has(tbody td:nth-of-type(12):hover) thead tr th:nth-of-type(12) {
+        @apply bg-red-500/10;
+    }
+    table:has(tbody td:nth-of-type(1):focus) thead tr th:nth-of-type(1),
+    table:has(tbody td:nth-of-type(2):focus) thead tr th:nth-of-type(2),
+    table:has(tbody td:nth-of-type(3):focus) thead tr th:nth-of-type(3),
+    table:has(tbody td:nth-of-type(4):focus) thead tr th:nth-of-type(4),
+    table:has(tbody td:nth-of-type(5):focus) thead tr th:nth-of-type(5),
+    table:has(tbody td:nth-of-type(6):focus) thead tr th:nth-of-type(6),
+    table:has(tbody td:nth-of-type(7):focus) thead tr th:nth-of-type(7),
+    table:has(tbody td:nth-of-type(8):focus) thead tr th:nth-of-type(8),
+    table:has(tbody td:nth-of-type(9):focus) thead tr th:nth-of-type(9),
+    table:has(tbody td:nth-of-type(10):focus) thead tr th:nth-of-type(10),
+    table:has(tbody td:nth-of-type(11):focus) thead tr th:nth-of-type(11),
+    table:has(tbody td:nth-of-type(12):focus) thead tr th:nth-of-type(12) {
+        @apply bg-red-500/10;
+    }
+
+    /* If Sass ------------------------
+        @for $i from 1 through 12 {
+            table:has(tbody td:nth-of-type(#{$i}):hover) thead tr th:nth-of-type(#{$i}),
+            table:has(tbody td:nth-of-type(#{$i}):focus) thead tr th:nth-of-type(#{$i}) {
+                background-color: ***;
+            }
+        }
+    ----------------------------------*/
+
+    tbody:has(td:nth-of-type(1):hover) tr:has(~ tr:hover) td:nth-of-type(1),
+    tbody:has(td:nth-of-type(2):hover) tr:has(~ tr:hover) td:nth-of-type(2),
+    tbody:has(td:nth-of-type(3):hover) tr:has(~ tr:hover) td:nth-of-type(3),
+    tbody:has(td:nth-of-type(4):hover) tr:has(~ tr:hover) td:nth-of-type(4),
+    tbody:has(td:nth-of-type(5):hover) tr:has(~ tr:hover) td:nth-of-type(5),
+    tbody:has(td:nth-of-type(6):hover) tr:has(~ tr:hover) td:nth-of-type(6),
+    tbody:has(td:nth-of-type(7):hover) tr:has(~ tr:hover) td:nth-of-type(7),
+    tbody:has(td:nth-of-type(8):hover) tr:has(~ tr:hover) td:nth-of-type(8),
+    tbody:has(td:nth-of-type(9):hover) tr:has(~ tr:hover) td:nth-of-type(9),
+    tbody:has(td:nth-of-type(10):hover) tr:has(~ tr:hover) td:nth-of-type(10),
+    tbody:has(td:nth-of-type(11):hover) tr:has(~ tr:hover) td:nth-of-type(11),
+    tbody:has(td:nth-of-type(12):hover) tr:has(~ tr:hover) td:nth-of-type(12) {
+        @apply bg-red-500/5;
+    }
+    tbody:has(td:nth-of-type(1):focus) tr:has(~ tr:focus-within) td:nth-of-type(1),
+    tbody:has(td:nth-of-type(2):focus) tr:has(~ tr:focus-within) td:nth-of-type(2),
+    tbody:has(td:nth-of-type(3):focus) tr:has(~ tr:focus-within) td:nth-of-type(3),
+    tbody:has(td:nth-of-type(4):focus) tr:has(~ tr:focus-within) td:nth-of-type(4),
+    tbody:has(td:nth-of-type(5):focus) tr:has(~ tr:focus-within) td:nth-of-type(5),
+    tbody:has(td:nth-of-type(6):focus) tr:has(~ tr:focus-within) td:nth-of-type(6),
+    tbody:has(td:nth-of-type(7):focus) tr:has(~ tr:focus-within) td:nth-of-type(7),
+    tbody:has(td:nth-of-type(8):focus) tr:has(~ tr:focus-within) td:nth-of-type(8),
+    tbody:has(td:nth-of-type(9):focus) tr:has(~ tr:focus-within) td:nth-of-type(9),
+    tbody:has(td:nth-of-type(10):focus) tr:has(~ tr:focus-within) td:nth-of-type(10),
+    tbody:has(td:nth-of-type(11):focus) tr:has(~ tr:focus-within) td:nth-of-type(11),
+    tbody:has(td:nth-of-type(12):focus) tr:has(~ tr:focus-within) td:nth-of-type(12) {
+        @apply bg-red-500/5;
+    }
+
+    /* If Sass ------------------------
+        @for $i from 1 through 12 {
+            tbody:has(td:nth-of-type(#{$i}):hover) tr:has(~ tr:hover) td:nth-of-type(#{$i}),
+            tbody:has(td:nth-of-type(#{$i}):focus) tr:has(~ tr:focus-within) td:nth-of-type(#{$i}) {
+                background-color: ***;
+            }
+        }
+    ----------------------------------*/
+}
