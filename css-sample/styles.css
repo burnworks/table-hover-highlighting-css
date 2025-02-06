@@ -1,18 +1,18 @@
 :root {
---spacing: .25rem;
+    --spacing: .25rem;
 
---color-gray-50: oklch(.985 .002 247.839);
---color-gray-400: oklch(.707 .022 261.325);
---color-gray-700: oklch(.373 .034 259.733);
---color-gray-900: oklch(.21 .034 264.665);
---color-gray-300: oklch(.872 .01 258.338);
---color-green-50: oklch(.982 .018 155.826);
---color-red-500: oklch(.637 .237 25.331);
+    --color-gray-50: oklch(.985 .002 247.839);
+    --color-gray-400: oklch(.707 .022 261.325);
+    --color-gray-700: oklch(.373 .034 259.733);
+    --color-gray-900: oklch(.21 .034 264.665);
+    --color-gray-300: oklch(.872 .01 258.338);
+    --color-green-50: oklch(.982 .018 155.826);
+    --color-red-500: oklch(.637 .237 25.331);
 
---font-weight-semibold: 600;
+    --font-weight-semibold: 600;
 
---text-sm: .875rem;
---text-sm--line-height: calc(1.25 / .875);
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
 }
 
 @property --tw-border-style {
