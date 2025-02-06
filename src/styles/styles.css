@@ -4,14 +4,20 @@
     --font-body: "Noto Sans JP Variable", sans-serif;
 }
 
-/* ↓ ここから table のスタイル ↓ */
 @layer components {
 
+    /* ↓ ここから table のスタイル ↓ */
     table {
         @apply min-w-full border-separate border-spacing-0 overflow-hidden border border-gray-400;
     }
     caption {
         @apply pb-6 font-semibold text-gray-900;
+    }
+    th {
+        @apply whitespace-nowrap px-3 py-4 text-left font-semibold text-gray-900;
+    }
+    td {
+        @apply whitespace-nowrap px-3 py-4 text-sm text-gray-700;
     }
     thead {
         @apply sticky inset-x-0 top-0 bg-green-50 border-b border-gray-300 shadow-sm z-10;
@@ -32,6 +38,7 @@
         td {
             @apply text-center;
 
+    /* ↓ ハイライト表示に関係しているのは主にここ以降 ↓ */
             &:hover {
                 @apply bg-red-500/30;
             }
@@ -56,12 +63,6 @@
                 @apply bg-red-500/10;
             }
         }
-    }
-    th {
-        @apply whitespace-nowrap px-3 py-4 text-left font-semibold text-gray-900;
-    }
-    td {
-        @apply whitespace-nowrap px-3 py-4 text-sm text-gray-700;
     }
 
     table:has(tbody td:nth-of-type(1):hover) thead tr th:nth-of-type(1),
@@ -94,12 +95,12 @@
     }
 
     /* If Sass ------------------------
-        @for $i from 1 through 12 {
-            table:has(tbody td:nth-of-type(#{$i}):hover) thead tr th:nth-of-type(#{$i}),
-            table:has(tbody td:nth-of-type(#{$i}):focus-within) thead tr th:nth-of-type(#{$i}) {
-                background-color: ***;
-            }
+    @for $i from 1 through 12 {
+        table:has(tbody td:nth-of-type(#{$i}):hover) thead tr th:nth-of-type(#{$i}),
+        table:has(tbody td:nth-of-type(#{$i}):focus-within) thead tr th:nth-of-type(#{$i}) {
+            background-color: ***;
         }
+    }
     ----------------------------------*/
 
     tbody:has(td:nth-of-type(1):hover) tr:has(~ tr:hover) td:nth-of-type(1),
@@ -132,11 +133,11 @@
     }
 
     /* If Sass ------------------------
-        @for $i from 1 through 12 {
-            tbody:has(td:nth-of-type(#{$i}):hover) tr:has(~ tr:hover) td:nth-of-type(#{$i}),
-            tbody:has(td:nth-of-type(#{$i}):focus-within) tr:has(~ tr:focus-within) td:nth-of-type(#{$i}) {
-                background-color: ***;
-            }
+    @for $i from 1 through 12 {
+        tbody:has(td:nth-of-type(#{$i}):hover) tr:has(~ tr:hover) td:nth-of-type(#{$i}),
+        tbody:has(td:nth-of-type(#{$i}):focus-within) tr:has(~ tr:focus-within) td:nth-of-type(#{$i}) {
+            background-color: ***;
         }
+    }
     ----------------------------------*/
 }
