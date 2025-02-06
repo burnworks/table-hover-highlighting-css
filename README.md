@@ -10,6 +10,12 @@ src/styles/styles.css
 
 Tailwind CSS を使用しているため `@apply` 以降の指定は実際のプロパティと値に読みかえてください。
 
+通常のCSSにしたものを下記に入れてあります。参考まで。
+
+```
+css-sample/styles.css
+```
+
 ## Demo
 
 - [:hover や :focus でセルをわかりやすくハイライトする CSS のサンプル - table highlighting with CSS :has()](https://burnworks.github.io/table-hover-highlighting-css/)
