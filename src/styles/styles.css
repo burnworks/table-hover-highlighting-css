@@ -96,7 +96,7 @@
     /* If Sass ------------------------
         @for $i from 1 through 12 {
             table:has(tbody td:nth-of-type(#{$i}):hover) thead tr th:nth-of-type(#{$i}),
-            table:has(tbody td:nth-of-type(#{$i}) :focus-within) thead tr th:nth-of-type(#{$i}) {
+            table:has(tbody td:nth-of-type(#{$i}):focus-within) thead tr th:nth-of-type(#{$i}) {
                 background-color: ***;
             }
         }
