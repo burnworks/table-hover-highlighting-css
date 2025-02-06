@@ -1,6 +1,6 @@
 # table highlighting with CSS :has()
 
-table のセルを :hover や :focus したときに、そのセルをわかりやすくハイライト表示する CSS のサンプルを紹介しています。
+table のセルを :hover したり、セル内の要素に :focus したときに、そのセルをわかりやすくハイライト表示する CSS のサンプルを紹介しています。
 
 ```
 src/styles/styles.css
