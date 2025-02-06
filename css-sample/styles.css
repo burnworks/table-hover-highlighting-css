@@ -125,12 +125,12 @@ tbody td {
 }
 
 tbody td:hover,
-tbody td:focus {
+tbody td:focus-within {
     background-color: color-mix(in oklab, var(--color-red-500) 30%, transparent);
 }
 
 tbody td:has(~td:hover),
-tbody td:has(~td:focus) {
+tbody td:has(~td:focus-within) {
     background-color: color-mix(in oklab, var(--color-red-500) 5%, transparent);
 }
 
@@ -139,7 +139,7 @@ tbody tr:nth-child(2n) {
 }
 
 tbody tr:has(td:hover) th,
-tbody tr:has(td:focus) th {
+tbody tr:has(td:focus-within) th {
     background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
 }
 
@@ -174,18 +174,18 @@ table:has(tbody td:nth-of-type(9):hover) thead tr th:nth-of-type(9),
 table:has(tbody td:nth-of-type(10):hover) thead tr th:nth-of-type(10),
 table:has(tbody td:nth-of-type(11):hover) thead tr th:nth-of-type(11),
 table:has(tbody td:nth-of-type(12):hover) thead tr th:nth-of-type(12),
-table:has(tbody td:first-of-type:focus) thead tr th:first-of-type,
-table:has(tbody td:nth-of-type(2):focus) thead tr th:nth-of-type(2),
-table:has(tbody td:nth-of-type(3):focus) thead tr th:nth-of-type(3),
-table:has(tbody td:nth-of-type(4):focus) thead tr th:nth-of-type(4),
-table:has(tbody td:nth-of-type(5):focus) thead tr th:nth-of-type(5),
-table:has(tbody td:nth-of-type(6):focus) thead tr th:nth-of-type(6),
-table:has(tbody td:nth-of-type(7):focus) thead tr th:nth-of-type(7),
-table:has(tbody td:nth-of-type(8):focus) thead tr th:nth-of-type(8),
-table:has(tbody td:nth-of-type(9):focus) thead tr th:nth-of-type(9),
-table:has(tbody td:nth-of-type(10):focus) thead tr th:nth-of-type(10),
-table:has(tbody td:nth-of-type(11):focus) thead tr th:nth-of-type(11),
-table:has(tbody td:nth-of-type(12):focus) thead tr th:nth-of-type(12) {
+table:has(tbody td:first-of-type:focus-within) thead tr th:first-of-type,
+table:has(tbody td:nth-of-type(2):focus-within) thead tr th:nth-of-type(2),
+table:has(tbody td:nth-of-type(3):focus-within) thead tr th:nth-of-type(3),
+table:has(tbody td:nth-of-type(4):focus-within) thead tr th:nth-of-type(4),
+table:has(tbody td:nth-of-type(5):focus-within) thead tr th:nth-of-type(5),
+table:has(tbody td:nth-of-type(6):focus-within) thead tr th:nth-of-type(6),
+table:has(tbody td:nth-of-type(7):focus-within) thead tr th:nth-of-type(7),
+table:has(tbody td:nth-of-type(8):focus-within) thead tr th:nth-of-type(8),
+table:has(tbody td:nth-of-type(9):focus-within) thead tr th:nth-of-type(9),
+table:has(tbody td:nth-of-type(10):focus-within) thead tr th:nth-of-type(10),
+table:has(tbody td:nth-of-type(11):focus-within) thead tr th:nth-of-type(11),
+table:has(tbody td:nth-of-type(12):focus-within) thead tr th:nth-of-type(12) {
     background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
 }
 
