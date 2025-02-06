@@ -1,0 +1,217 @@
+:root {
+--spacing: .25rem;
+
+--color-gray-50: oklch(.985 .002 247.839);
+--color-gray-400: oklch(.707 .022 261.325);
+--color-gray-700: oklch(.373 .034 259.733);
+--color-gray-900: oklch(.21 .034 264.665);
+--color-gray-300: oklch(.872 .01 258.338);
+--color-green-50: oklch(.982 .018 155.826);
+--color-red-500: oklch(.637 .237 25.331);
+
+--font-weight-semibold: 600;
+
+--text-sm: .875rem;
+--text-sm--line-height: calc(1.25 / .875);
+}
+
+@property --tw-border-style {
+    syntax: "*";
+    inherits: false;
+    initial-value: solid;
+}
+
+@property --tw-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+}
+
+@property --tw-shadow-color {
+    syntax: "*";
+    inherits: false;
+}
+
+@property --tw-inset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+}
+
+@property --tw-inset-ring-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+}
+
+@property --tw-ring-offset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000;
+}
+
+@property --tw-ring-shadow {
+    syntax: "*";
+    inherits: false;
+}
+
+@property --tw-divide-y-reverse {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0;
+}
+
+table {
+    border-collapse: separate;
+    --tw-border-spacing-x: calc(var(--spacing)*0);
+    --tw-border-spacing-y: calc(var(--spacing)*0);
+    min-width: 100%;
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-gray-400);
+    overflow: hidden;
+}
+
+caption {
+    padding-bottom: calc(var(--spacing)*6);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+}
+
+thead {
+    inset-inline: calc(var(--spacing)*0);
+    top: calc(var(--spacing)*0);
+    z-index: 10;
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-color: var(--color-gray-300);
+    background-color: var(--color-green-50);
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a),
+        0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+        var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    position: sticky;
+}
+
+thead th {
+    text-align: center;
+}
+
+thead td {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 1px;
+    border-color: var(--color-gray-300);
+}
+
+:where(tbody > :not(:last-child)) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-style: var(--tw-border-style);
+    border-top-style: var(--tw-border-style);
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+    border-color: var(--color-gray-300);
+}
+
+tbody th {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 1px;
+    border-color: var(--color-gray-300);
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody td:hover,
+tbody td:focus {
+    background-color: color-mix(in oklab, var(--color-red-500) 30%, transparent);
+}
+
+tbody td:has(~td:hover),
+tbody td:has(~td:focus) {
+    background-color: color-mix(in oklab, var(--color-red-500) 5%, transparent);
+}
+
+tbody tr:nth-child(2n) {
+    background-color: var(--color-gray-50);
+}
+
+tbody tr:has(td:hover) th,
+tbody tr:has(td:focus) th {
+    background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
+}
+
+th {
+    padding-inline: calc(var(--spacing)*3);
+    padding-block: calc(var(--spacing)*4);
+    text-align: left;
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+    color: var(--color-gray-900);
+}
+
+td {
+    padding-inline: calc(var(--spacing)*3);
+    padding-block: calc(var(--spacing)*4);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    white-space: nowrap;
+    color: var(--color-gray-700);
+}
+
+table:has(tbody td:first-of-type:hover) thead tr th:first-of-type,
+table:has(tbody td:nth-of-type(2):hover) thead tr th:nth-of-type(2),
+table:has(tbody td:nth-of-type(3):hover) thead tr th:nth-of-type(3),
+table:has(tbody td:nth-of-type(4):hover) thead tr th:nth-of-type(4),
+table:has(tbody td:nth-of-type(5):hover) thead tr th:nth-of-type(5),
+table:has(tbody td:nth-of-type(6):hover) thead tr th:nth-of-type(6),
+table:has(tbody td:nth-of-type(7):hover) thead tr th:nth-of-type(7),
+table:has(tbody td:nth-of-type(8):hover) thead tr th:nth-of-type(8),
+table:has(tbody td:nth-of-type(9):hover) thead tr th:nth-of-type(9),
+table:has(tbody td:nth-of-type(10):hover) thead tr th:nth-of-type(10),
+table:has(tbody td:nth-of-type(11):hover) thead tr th:nth-of-type(11),
+table:has(tbody td:nth-of-type(12):hover) thead tr th:nth-of-type(12),
+table:has(tbody td:first-of-type:focus) thead tr th:first-of-type,
+table:has(tbody td:nth-of-type(2):focus) thead tr th:nth-of-type(2),
+table:has(tbody td:nth-of-type(3):focus) thead tr th:nth-of-type(3),
+table:has(tbody td:nth-of-type(4):focus) thead tr th:nth-of-type(4),
+table:has(tbody td:nth-of-type(5):focus) thead tr th:nth-of-type(5),
+table:has(tbody td:nth-of-type(6):focus) thead tr th:nth-of-type(6),
+table:has(tbody td:nth-of-type(7):focus) thead tr th:nth-of-type(7),
+table:has(tbody td:nth-of-type(8):focus) thead tr th:nth-of-type(8),
+table:has(tbody td:nth-of-type(9):focus) thead tr th:nth-of-type(9),
+table:has(tbody td:nth-of-type(10):focus) thead tr th:nth-of-type(10),
+table:has(tbody td:nth-of-type(11):focus) thead tr th:nth-of-type(11),
+table:has(tbody td:nth-of-type(12):focus) thead tr th:nth-of-type(12) {
+    background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
+}
+
+tbody:has(td:first-of-type:hover) tr:has(~tr:hover) td:first-of-type,
+tbody:has(td:nth-of-type(2):hover) tr:has(~tr:hover) td:nth-of-type(2),
+tbody:has(td:nth-of-type(3):hover) tr:has(~tr:hover) td:nth-of-type(3),
+tbody:has(td:nth-of-type(4):hover) tr:has(~tr:hover) td:nth-of-type(4),
+tbody:has(td:nth-of-type(5):hover) tr:has(~tr:hover) td:nth-of-type(5),
+tbody:has(td:nth-of-type(6):hover) tr:has(~tr:hover) td:nth-of-type(6),
+tbody:has(td:nth-of-type(7):hover) tr:has(~tr:hover) td:nth-of-type(7),
+tbody:has(td:nth-of-type(8):hover) tr:has(~tr:hover) td:nth-of-type(8),
+tbody:has(td:nth-of-type(9):hover) tr:has(~tr:hover) td:nth-of-type(9),
+tbody:has(td:nth-of-type(10):hover) tr:has(~tr:hover) td:nth-of-type(10),
+tbody:has(td:nth-of-type(11):hover) tr:has(~tr:hover) td:nth-of-type(11),
+tbody:has(td:nth-of-type(12):hover) tr:has(~tr:hover) td:nth-of-type(12),
+tbody:has(td:first-of-type:focus) tr:has(~tr:focus-within) td:first-of-type,
+tbody:has(td:nth-of-type(2):focus) tr:has(~tr:focus-within) td:nth-of-type(2),
+tbody:has(td:nth-of-type(3):focus) tr:has(~tr:focus-within) td:nth-of-type(3),
+tbody:has(td:nth-of-type(4):focus) tr:has(~tr:focus-within) td:nth-of-type(4),
+tbody:has(td:nth-of-type(5):focus) tr:has(~tr:focus-within) td:nth-of-type(5),
+tbody:has(td:nth-of-type(6):focus) tr:has(~tr:focus-within) td:nth-of-type(6),
+tbody:has(td:nth-of-type(7):focus) tr:has(~tr:focus-within) td:nth-of-type(7),
+tbody:has(td:nth-of-type(8):focus) tr:has(~tr:focus-within) td:nth-of-type(8),
+tbody:has(td:nth-of-type(9):focus) tr:has(~tr:focus-within) td:nth-of-type(9),
+tbody:has(td:nth-of-type(10):focus) tr:has(~tr:focus-within) td:nth-of-type(10),
+tbody:has(td:nth-of-type(11):focus) tr:has(~tr:focus-within) td:nth-of-type(11),
+tbody:has(td:nth-of-type(12):focus) tr:has(~tr:focus-within) td:nth-of-type(12) {
+    background-color: color-mix(in oklab, var(--color-red-500) 5%, transparent);
+}
